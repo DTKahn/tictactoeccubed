@@ -1,3 +1,15 @@
-ul {
+/* Styles for the GameBoard Component */
+
+.GameBoard {
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
   list-style: none;
 }
+

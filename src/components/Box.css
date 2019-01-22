@@ -1,0 +1,20 @@
+
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 40px;
+  background: lightgrey;
+  margin: 3px;
+  list-style: none;
+}
+
+.player1 {
+  background: lightcoral;
+}
+
+.player2 {
+  background: lightblue;
+}
