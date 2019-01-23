@@ -33,31 +33,31 @@ class GameArea extends Component {
       //     [null, null, null, null],
       //     [null, null, null, null]
       //   ]
-        gameBoards : [
-          [
-            ["P1", null, null, null],
-            [null, "P1", null, null],
-            [null, null, "P2", null],
-            [null, null, null, "P1"]
-          ],
-          [
-            [null, null, null, null],
-            ["P2", null, null, null],
-            [null, null, null, null],
-            [null, null, null, "P2"]
-          ],
-          [
-            [null, null, "P2", null],
-            [null, null, "P2", null],
-            ["P1", null, null, null],
-            [null, null, "P2", null]
-          ],
-          [
-            [null, null, null, null],
-            [null, null, null, null],
-            [null, null, null, null],
-            ["P1", null, null, "P1"]
-          ]
+      gameBoards : [
+        [
+          ["P1", null, null, null],
+          [null, "P1", null, null],
+          [null, null, "P2", null],
+          [null, null, null, "P1"]
+        ],
+        [
+          [null, null, null, null],
+          ["P2", null, null, null],
+          [null, null, null, null],
+          [null, null, null, "P2"]
+        ],
+        [
+          [null, null, "P2", null],
+          [null, null, "P2", null],
+          ["P1", null, null, null],
+          [null, null, "P2", null]
+        ],
+        [
+          [null, null, null, null],
+          [null, null, null, null],
+          [null, null, null, null],
+          ["P1", null, null, "P1"]
+        ]
       ]
     }
   }
