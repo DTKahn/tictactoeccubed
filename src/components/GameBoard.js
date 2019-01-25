@@ -4,47 +4,47 @@ import './GameBoard.css';
 // Component Imports
 import Box from "./Box";
 
+const getColumn = number => {
+  const colName = ["A", "B", "C", "D"]
+  return colName[number]
+}
+
 const GameBoard = props => {
   return (
     <div className="GameBoard">
+      {/* Render One Board */}
       <ul className="rows">
-        <li className="row row1">
-          <ul className="columns">
-            {props.gameBoards[props.boardNumber][0].map((box, index) => <Box
-              player={box}
-              column="A"
-              row={index + 1}
-            />)}
-          </ul>
-        </li>
-        <li className="row row2">
-          <ul className="columns">
-            {props.gameBoards[props.boardNumber][1].map((box, index) => <Box
-              player={box}
-              column="B"
-              row={index + 1}
-            />)}
-          </ul>
-        </li>
-        <li className="row row3">
-          <ul className="columns">
-            {props.gameBoards[props.boardNumber][2].map((box, index) => <Box
-              player={box}
-              column="C"
-              row={index + 1}
-            />)}
-          </ul>
-        </li>
-        <li className="row row4">
-          <ul className="columns">
-            {props.gameBoards[props.boardNumber][3].map((box, index) => <Box
-              player={box}
-              column="D"
-              row={index + 1}
-            />)}
-          </ul>
-        </li>
+        
+        {/* Render Rows */}
+        {props.board.map((row, rowNumber) => {
+          
+          // Render One Row
+          return (
+            <li className="row">
+              <ul className="columns">
+                
+                {/* Render Each Box in the Row */}
+                {row.map((box, columnNumber) => <Box 
+                  player={box}
+                  column={getColumn(columnNumber)}
+                  row={rowNumber + 1}
+                  boardNumber={props.boardNumber}
+                  rowNumber={rowNumber}
+                  columnNumber={columnNumber}
+                  handleBoxClick={props.handleBoxClick}
+                />)}
+                {/* End of Render Each Box in the Row */}
+
+              </ul>
+            </li>
+          )
+          // End of Render One Row
+
+        })}
+        {/* End of Render Row */}
+
       </ul>
+
     </div>
   );
 }

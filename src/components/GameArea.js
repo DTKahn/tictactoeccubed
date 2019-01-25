@@ -72,25 +72,28 @@ class GameArea extends Component {
 
   componentDidMount(){
     // Test
-    this.handleBoxClick(0, 0, 2, "P1")
-    this.handleBoxClick(0, 0, 3, "P2")
-    this.handleBoxClick(1, 2, 2, "P1")
-    this.handleBoxClick(0, 0, 0, "P2")
-    this.handleBoxClick(3, 2, 1, "P1")
-    this.handleBoxClick(2, 2, 0, "P2")
-    this.handleBoxClick(0, 3, 2, "P1")
-    this.handleBoxClick(1, 0, 1, "P2")
-    this.handleBoxClick(0, 1, 3, "P1")
-    this.handleBoxClick(2, 1, 3, "P2")
+    // this.handleBoxClick(0, 0, 2, "P1")
+    // this.handleBoxClick(0, 0, 3, "P2")
+    // this.handleBoxClick(1, 2, 2, "P1")
+    // this.handleBoxClick(0, 0, 0, "P2")
+    // this.handleBoxClick(3, 2, 1, "P1")
+    // this.handleBoxClick(2, 2, 0, "P2")
+    // this.handleBoxClick(0, 3, 2, "P1")
+    // this.handleBoxClick(1, 0, 1, "P2")
+    // this.handleBoxClick(0, 1, 3, "P1")
+    // this.handleBoxClick(2, 1, 3, "P2")
   }
 
   render() {
     return (
       <div className="gameArea">
-        <GameBoard boardNumber={0} gameBoards={this.state.gameBoards}/>
-        <GameBoard boardNumber={1} gameBoards={this.state.gameBoards}/>
-        <GameBoard boardNumber={2} gameBoards={this.state.gameBoards}/>
-        <GameBoard boardNumber={3} gameBoards={this.state.gameBoards}/>
+        {/* Render each game board */}
+        {this.state.gameBoards.map((board, boardNumber) => <GameBoard 
+          boardNumber={boardNumber} 
+          gameBoards={this.state.gameBoards}
+          board={board}
+          handleBoxClick={this.handleBoxClick}
+        />)}
       </div>
     );
   }
