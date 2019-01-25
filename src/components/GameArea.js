@@ -63,11 +63,11 @@ class GameArea extends Component {
   }
 
   handleBoxClick = (board, col, row, player) => {
-    let gameBoardsCopy = [...this.state.gameBoards]
+    let gameBoardsCopy = [...this.state.gameBoards];
 
-    gameBoardsCopy[board][col][row] = player
+    gameBoardsCopy[board][col][row] = player;
 
-    this.setState({gameBoards : gameBoardsCopy})
+    this.setState({gameBoards : gameBoardsCopy});
   }
 
   componentDidMount(){
