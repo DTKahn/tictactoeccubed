@@ -32,6 +32,7 @@ const GameBoard = props => {
                   rowNumber={rowNumber}
                   columnNumber={columnNumber}
                   handleBoxClick={props.handleBoxClick}
+                  playerTurn={props.playerTurn}
                 />)}
                 {/* End of Render Each Box in the Row */}
 

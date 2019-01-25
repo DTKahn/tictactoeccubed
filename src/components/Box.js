@@ -5,7 +5,7 @@ const Box = props => {
   return (
     <li 
       className={"box " + props.player} 
-      onClick={() => props.handleBoxClick(props.boardNumber, props.columnNumber, props.rowNumber, "P1")}
+      onClick={() => props.handleBoxClick(props.boardNumber, props.rowNumber, props.columnNumber, props.playerTurn)}
     >
       {props.column + props.row}
     </li>

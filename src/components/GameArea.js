@@ -7,7 +7,7 @@ class GameArea extends Component {
   constructor(){
     super();
     this.state = {
-      playerTurn : "player1",
+      playerTurn : "P1",
       gameBoards : [
         [
           [null, null, null, null],
@@ -62,12 +62,23 @@ class GameArea extends Component {
     }
   }
 
-  handleBoxClick = (board, col, row, player) => {
+  handleBoxClick = (board, row, col, player) => {
     let gameBoardsCopy = [...this.state.gameBoards];
 
-    gameBoardsCopy[board][col][row] = player;
+    if (gameBoardsCopy[board][row][col] === null) {
+      gameBoardsCopy[board][row][col] = player;
 
-    this.setState({gameBoards : gameBoardsCopy});
+      let nextPlayer = "P1";
+      if (this.state.playerTurn === "P1") {
+
+        nextPlayer = "P2";
+      }
+
+      this.setState({
+        gameBoards : gameBoardsCopy,
+        playerTurn : nextPlayer
+      });
+    }
   }
 
   componentDidMount(){
@@ -93,6 +104,7 @@ class GameArea extends Component {
           gameBoards={this.state.gameBoards}
           board={board}
           handleBoxClick={this.handleBoxClick}
+          playerTurn={this.state.playerTurn}
         />)}
       </div>
     );
