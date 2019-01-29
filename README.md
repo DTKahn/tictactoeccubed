@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 4 x 4 x 4 x 4 tic-tac-toe
+
+Play 4 in a row in any direction to win.
+
 
 ## Available Scripts
 
