@@ -33,31 +33,6 @@ class GameArea extends Component {
           [null, null, null, null],
           [null, null, null, null]
         ]
-      // gameBoards : [
-      //   [
-      //     ["P1", null, null, null],
-      //     [null, "P1", null, null],
-      //     [null, null, "P2", null],
-      //     [null, null, null, "P1"]
-      //   ],
-      //   [
-      //     [null, null, null, null],
-      //     ["P2", null, null, null],
-      //     [null, null, null, null],
-      //     [null, null, null, "P2"]
-      //   ],
-      //   [
-      //     [null, null, "P2", null],
-      //     [null, null, "P2", null],
-      //     ["P1", null, null, null],
-      //     [null, null, "P2", null]
-      //   ],
-      //   [
-      //     [null, null, null, null],
-      //     [null, null, null, null],
-      //     [null, null, null, null],
-      //     ["P1", null, null, "P1"]
-      //   ]
       ]
     }
   }
@@ -81,19 +56,9 @@ class GameArea extends Component {
     }
   }
 
-  componentDidMount(){
-    // Test
-    // this.handleBoxClick(0, 0, 2, "P1")
-    // this.handleBoxClick(0, 0, 3, "P2")
-    // this.handleBoxClick(1, 2, 2, "P1")
-    // this.handleBoxClick(0, 0, 0, "P2")
-    // this.handleBoxClick(3, 2, 1, "P1")
-    // this.handleBoxClick(2, 2, 0, "P2")
-    // this.handleBoxClick(0, 3, 2, "P1")
-    // this.handleBoxClick(1, 0, 1, "P2")
-    // this.handleBoxClick(0, 1, 3, "P1")
-    // this.handleBoxClick(2, 1, 3, "P2")
-  }
+  // componentDidMount(){
+
+  // }
 
   render() {
     return (
